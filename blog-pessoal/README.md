@@ -11,7 +11,7 @@ Este projeto é uma aplicação web full stack para gerenciamento de postagens e
 
 #
 
-  ## 🌐 Link do Projeto Online (RESPONSIVO)
+## 🌐 Link do Projeto Online (RESPONSIVO)
 
 Acesse o Blogify publicado com Netlify:
 
