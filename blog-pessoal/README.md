@@ -13,7 +13,7 @@ Este projeto é uma aplicação web full stack para gerenciamento de postagens e
 
 Acesse o Blogify publicado com Netlify:
 
-[![Ver Blogify Online](https://img.shields.io/badge/🔗%20Ver%20Blogify%20Online-acesse%20aqui-green?style=for-the-badge&logo=netlify)](https://blogify-blog-pessoal.netlify.app)
+🔗 [https://blogify-blog-pessoal.netlify.app](https://blogify-blog-pessoal.netlify.app)
 
 
 ---
