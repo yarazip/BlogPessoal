@@ -9,6 +9,15 @@ Este projeto é uma aplicação web full stack para gerenciamento de postagens e
 - Interface moderna e responsiva com Angular
 - Boas práticas de segurança, arquitetura e documentação
 
+#
+
+## 🌐 Link do Projeto Online (RESPONSIVO)
+
+Acesse o Blogify publicado com Netlify:
+
+[![Blogify Online](https://img.shields.io/badge/🔗%20Ver%20Blogify%20Online-acesse%20aqui-purple?style=for-the-badge&logo=netlify)](https://blogify-blog-pessoal.netlify.app)
+
+
 ---
 
 ## 🚀 Tecnologias Utilizadas
@@ -206,10 +215,6 @@ Este projeto é exclusivamente **educacional** e destinado a fins de **aprendiza
 ## 👩🏻‍💻 Autora
 Yara Rosa
 GitHub: https://github.com/yarazip
-
-
-
-
 
 
 
