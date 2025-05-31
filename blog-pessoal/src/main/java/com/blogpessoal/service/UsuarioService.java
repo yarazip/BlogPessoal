@@ -77,16 +77,11 @@ public class UsuarioService {
         return passwordEncoder.matches(senhaDigitada, senhaBanco);
     }
 
-    public Usuario atualizarPerfil(Long id, MultipartFile foto, String bio) throws IOException {
+    public Usuario atualizarFoto(Long id, MultipartFile foto) throws IOException {
         Usuario usuario = usuarioRepository.findById(id)
             .orElseThrow(() -> new UsernameNotFoundException("Usuário não encontrado"));
 
-        if (bio != null) {
-            usuario.setBio(bio);
-        }
-
         if (foto != null && !foto.isEmpty()) {
-            System.out.println("Recebendo arquivo: " + foto.getOriginalFilename());
             String urlFoto = cloudinaryService.upload(foto);
             usuario.setFoto(urlFoto);
         }
