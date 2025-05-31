@@ -86,6 +86,7 @@ public class UsuarioService {
         }
 
         if (foto != null && !foto.isEmpty()) {
+            System.out.println("Recebendo arquivo: " + foto.getOriginalFilename());
             String urlFoto = cloudinaryService.upload(foto);
             usuario.setFoto(urlFoto);
         }
