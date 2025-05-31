@@ -24,6 +24,10 @@ import com.blogpessoal.security.UserDetailsImpl;
 
 @Service
 public class UsuarioService {
+	
+	@Autowired
+	private CloudinaryService cloudinaryService;
+
 
     @Autowired
     private UsuarioRepository usuarioRepository;
@@ -82,12 +86,13 @@ public class UsuarioService {
         }
 
         if (foto != null && !foto.isEmpty()) {
-            String nomeArquivo = salvarArquivo(foto);
-            usuario.setFoto("/uploads/" + nomeArquivo); 
+            String urlFoto = cloudinaryService.upload(foto);
+            usuario.setFoto(urlFoto);
         }
 
         return usuarioRepository.save(usuario);
     }
+
 
     private String salvarArquivo(MultipartFile arquivo) throws IOException {
         String nomeArquivo = UUID.randomUUID() + "_" + arquivo.getOriginalFilename();

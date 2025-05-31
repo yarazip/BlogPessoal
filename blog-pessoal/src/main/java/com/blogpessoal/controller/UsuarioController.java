@@ -23,7 +23,7 @@ public class UsuarioController {
     private UsuarioService usuarioService; 
     
 
-    @PutMapping("/{id}")
+    @PutMapping(value = "/{id}", consumes = {"multipart/form-data"})
     public ResponseEntity<Usuario> atualizarUsuario(
         @PathVariable Long id,
         @RequestParam(value = "foto", required = false) MultipartFile foto,
@@ -33,8 +33,9 @@ public class UsuarioController {
             Usuario usuarioAtualizado = usuarioService.atualizarPerfil(id, foto, bio);
             return ResponseEntity.ok(usuarioAtualizado);
         } catch (Exception e) {
-            e.printStackTrace();  // opcional para debug
+            e.printStackTrace();
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
     }
+
 }

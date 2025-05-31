@@ -131,6 +131,8 @@ public class PostagemController {
         return ResponseEntity.status(HttpStatus.CREATED).body(toDTO(postagemSalva));
     }
 
+    
+    
     @PutMapping("/{id}")
     public ResponseEntity<PostagemDTO> put(@PathVariable Long id,
             @Valid @RequestBody PostagemRequestDTO postagemDTO,
