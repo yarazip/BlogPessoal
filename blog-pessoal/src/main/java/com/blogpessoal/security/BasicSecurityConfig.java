@@ -34,6 +34,7 @@ public class BasicSecurityConfig {
             .cors(cors -> cors.configurationSource(corsConfigurationSource()))
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers(
+                    "/uploads/**",
                     "/api/auth/**",
                     "/swagger-ui/**",
                     "/v3/api-docs/**"
@@ -57,7 +58,7 @@ public class BasicSecurityConfig {
         CorsConfiguration configuration = new CorsConfiguration();
         configuration.setAllowedOriginPatterns(Arrays.asList(
         	    "http://localhost:4200", 
-        	    "https://blogblogify.netlify.app"
+        	    "https://blogify-ofc.netlify.app"
         	));        
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"));
         configuration.setAllowedHeaders(Arrays.asList("Authorization", "Cache-Control", "Content-Type"));
