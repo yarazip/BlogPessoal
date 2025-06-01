@@ -38,6 +38,10 @@ public class UsuarioService {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
+    public long countUsuarios() {
+        return usuarioRepository.count();
+    }
+    
     public boolean emailJaExiste(String email) {
         return usuarioRepository.findByEmail(email).isPresent();
     }
